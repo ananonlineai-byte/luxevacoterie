@@ -2,16 +2,16 @@
 
 @layer base {
   :root {
-    --bg-cream: #FBF8F3;
-    --bg-cream-alt: #F4ECE1;
-    --bg-silk: #FAF6F0;
-    --color-wine: #63222D;
-    --color-wine-dark: #46161F;
-    --color-rose: #C7727D;
-    --color-rose-light: #F4E2E5;
-    --color-gold: #C5A059;
-    --color-gold-light: #EBDCB9;
-    --color-charcoal: #1E1718;
+    --bg-cream: #060504;
+    --bg-cream-alt: #0E0C08;
+    --bg-silk: #15120C;
+    --color-wine: #9C7629;
+    --color-wine-dark: #6F511C;
+    --color-rose: #D0A84B;
+    --color-rose-light: #241D10;
+    --color-gold: #D6B45A;
+    --color-gold-light: #F1DE9C;
+    --color-charcoal: #F7EED5;
     
     --font-serif: 'Bodoni Moda', Georgia, serif;
     --font-cinzel: 'Cinzel', 'Bodoni Moda', serif;
@@ -41,14 +41,14 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #F4EFE6;
+    background: #0E0C08;
   }
   ::-webkit-scrollbar-thumb {
-    background: #C5A059;
+    background: #D6B45A;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #63222D;
+    background: #F1DE9C;
   }
 }
 
@@ -92,15 +92,15 @@
 
 /* Hairlines & Borders */
 .hairline-b {
-  border-bottom: 1px solid rgba(99, 34, 45, 0.12);
+  border-bottom: 1px solid rgba(214, 180, 90, 0.22);
 }
 
 .hairline-t {
-  border-top: 1px solid rgba(99, 34, 45, 0.12);
+  border-top: 1px solid rgba(214, 180, 90, 0.22);
 }
 
 .hairline-all {
-  border: 1px solid rgba(99, 34, 45, 0.12);
+  border: 1px solid rgba(214, 180, 90, 0.22);
 }
 
 .hairline-gold {
@@ -177,4 +177,94 @@
 [data-rev].is-revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Dark gold luxury theme overrides for hardcoded Tailwind arbitrary colors. */
+[class*="bg-[#FBF8F3]"],
+[class*="bg-[#FAF6F0]"],
+[class*="bg-[#F4ECE1]"],
+[class*="bg-[#F4EFE6]"],
+.bg-white,
+[class*="bg-white/"] {
+  background-color: #0E0C08 !important;
+}
+
+[class*="bg-[#1C1514]"],
+[class*="bg-[#2D1F21]"],
+[class*="bg-black/"] {
+  background-color: #050403 !important;
+}
+
+[class*="bg-[#63222D]"],
+[class*="bg-[#46161F]"],
+[class*="bg-[#7A2A37]"],
+[class*="bg-[#8B3A4A]"],
+[class*="from-[#63222D]"],
+[class*="via-[#7A2A37]"],
+[class*="to-[#63222D]"] {
+  background-color: #8F6A24 !important;
+}
+
+[class*="bg-[#C5A059]"],
+[class*="bg-[#EBDCB9]"],
+[class*="bg-[#D9C4A6]"] {
+  background-color: #D6B45A !important;
+}
+
+[class*="bg-gradient-to"] {
+  background-image: linear-gradient(135deg, #050403 0%, #171207 48%, #8F6A24 100%) !important;
+}
+
+[class*="text-[#1E1718]"],
+[class*="text-[#070707]"] {
+  color: #F7EED5 !important;
+}
+
+[class*="text-[#63222D]"],
+[class*="text-[#46161F]"],
+[class*="text-[#8B3A4A]"],
+[class*="text-[#C5A059]"] {
+  color: #D6B45A !important;
+}
+
+[class*="text-[#FBF8F3]"],
+[class*="text-[#FAF6F0]"],
+[class*="text-[#F7F7F4]"],
+[class*="text-white"] {
+  color: #FFF7DD !important;
+}
+
+[class*="text-[#EBDCB9]"] {
+  color: #F1DE9C !important;
+}
+
+[class*="border-[#63222D]"],
+[class*="border-[#46161F]"],
+[class*="border-[#C5A059]"],
+[class*="border-[#EBDCB9]"],
+[class*="border-white/"] {
+  border-color: rgba(214, 180, 90, 0.48) !important;
+}
+
+[class*="ring-[#63222D]"] {
+  --tw-ring-color: rgba(214, 180, 90, 0.72) !important;
+}
+
+input,
+textarea,
+select {
+  background-color: #0A0906 !important;
+  color: #F7EED5 !important;
+  border-color: rgba(214, 180, 90, 0.42) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(247, 238, 213, 0.46) !important;
+}
+
+.qr-surface,
+.qr-surface [class*="bg-white"],
+.qr-surface.bg-white {
+  background-color: #FFFFFF !important;
 }
