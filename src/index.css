@@ -310,10 +310,6 @@
   color: #FFF7DD !important;
 }
 
-#main-nav [class*="bg-[#63222D]"].text-[#FBF8F3],
-#main-nav [class*="bg-[#63222D]"] .text-[#FBF8F3] {
-  color: #FFF7DD !important;
-}
 
 [class*="border-[#63222D]"]:not([class*="border-[#63222D]/"]),
 [class*="border-[#46161F]"]:not([class*="border-[#46161F]/"]),
