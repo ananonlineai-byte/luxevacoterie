@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #060504;
+    --bg-cream-alt: #0E0C08;
+    --bg-silk: #15120C;
+    --color-wine: #9C7629;
+    --color-wine-dark: #6F511C;
+    --color-rose: #D0A84B;
+    --color-rose-light: #241D10;
+    --color-gold: #D6B45A;
+    --color-gold-light: #F1DE9C;
+    --color-charcoal: #F7EED5;
+    
+    --font-serif: 'Bodoni Moda', Georgia, serif;
+    --font-cinzel: 'Cinzel', 'Bodoni Moda', serif;
+    --font-script: 'Alex Brush', 'Caveat Brush', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-cream);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    overflow-x: clip;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-cream);
+    color: var(--color-charcoal);
+  }
+
+  /* Custom luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0E0C08;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D6B45A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F1DE9C;
+  }
+}
+
+/* Luxury Typography & Editorial Badges */
+.font-didone {
+  font-family: var(--font-serif);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.script-accent {
+  font-family: var(--font-script);
+  display: inline-block;
+  transform: rotate(-1.5deg);
+  transform-origin: center;
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.editorial-furniture {
+  font-family: var(--font-cinzel);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.editorial-furniture-wine {
+  font-family: var(--font-cinzel);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-wine);
+}
+
+/* Hairlines & Borders */
+.hairline-b {
+  border-bottom: 1px solid rgba(214, 180, 90, 0.22);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(214, 180, 90, 0.22);
+}
+
+.hairline-all {
+  border: 1px solid rgba(214, 180, 90, 0.22);
+}
+
+.hairline-gold {
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+/* Arched Card Shape for 4 Signature Services */
+.arch-card {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: rotate(-1.5deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-0.5deg) translateY(-5px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(197, 160, 89, 0.55);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-slow-rotate {
+  animation: slowRotate 24s linear infinite;
+}
+
+/* Stagger Scroll Reveal System */
+[data-rev] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-rev].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark gold luxury theme overrides for hardcoded Tailwind arbitrary colors. */
+[class*="bg-[#FBF8F3]"],
+[class*="bg-[#FAF6F0]"],
+[class*="bg-[#F4ECE1]"],
+[class*="bg-[#F4EFE6]"],
+.bg-white,
+[class*="bg-white/"] {
+  background-color: #0E0C08 !important;
+}
+
+[class*="bg-[#1C1514]"],
+[class*="bg-[#2D1F21]"],
+[class*="bg-black/"] {
+  background-color: #050403 !important;
+}
+
+[class*="bg-[#63222D]"],
+[class*="bg-[#46161F]"],
+[class*="bg-[#7A2A37]"],
+[class*="bg-[#8B3A4A]"],
+[class*="from-[#63222D]"],
+[class*="via-[#7A2A37]"],
+[class*="to-[#63222D]"] {
+  background-color: #8F6A24 !important;
+}
+
+[class*="bg-[#C5A059]"],
+[class*="bg-[#EBDCB9]"],
+[class*="bg-[#D9C4A6]"] {
+  background-color: #D6B45A !important;
+}
+
+[class*="bg-gradient-to"] {
+  background-image: linear-gradient(135deg, #050403 0%, #171207 48%, #8F6A24 100%) !important;
+}
+
+[class*="text-[#1E1718]"],
+[class*="text-[#070707]"] {
+  color: #F7EED5 !important;
+}
+
+[class*="text-[#63222D]"],
+[class*="text-[#46161F]"],
+[class*="text-[#8B3A4A]"],
+[class*="text-[#C5A059]"] {
+  color: #D6B45A !important;
+}
+
+[class*="text-[#FBF8F3]"],
+[class*="text-[#FAF6F0]"],
+[class*="text-[#F7F7F4]"],
+[class*="text-white"] {
+  color: #FFF7DD !important;
+}
+
+[class*="text-[#EBDCB9]"] {
+  color: #F1DE9C !important;
+}
+
+[class*="border-[#63222D]"],
+[class*="border-[#46161F]"],
+[class*="border-[#C5A059]"],
+[class*="border-[#EBDCB9]"],
+[class*="border-white/"] {
+  border-color: rgba(214, 180, 90, 0.48) !important;
+}
+
+[class*="ring-[#63222D]"] {
+  --tw-ring-color: rgba(214, 180, 90, 0.72) !important;
+}
+
+input,
+textarea,
+select {
+  background-color: #0A0906 !important;
+  color: #F7EED5 !important;
+  border-color: rgba(214, 180, 90, 0.42) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(247, 238, 213, 0.46) !important;
+}
+
+.qr-surface,
+.qr-surface [class*="bg-white"],
+.qr-surface.bg-white {
+  background-color: #FFFFFF !important;
+}

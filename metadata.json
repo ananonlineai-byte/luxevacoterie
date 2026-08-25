@@ -1,0 +1,6 @@
+{
+  "name": "LUXEVA COTERIE — Luxury Korean Nail & Spa Sanctuary",
+  "description": "Interactive, scroll-animated luxury Korean nail & botanical spa destination featuring hospital-grade sterilization, organic treatments, August 30% VIP booking, and authentic Korean imported care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
