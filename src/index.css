@@ -76,18 +76,20 @@
 .editorial-furniture {
   font-family: var(--font-cinzel);
   font-size: 10px;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 600;
+  line-height: 1.35;
 }
 
 .editorial-furniture-wine {
   font-family: var(--font-cinzel);
   font-size: 10px;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--color-wine);
+  line-height: 1.35;
 }
 
 /* Hairlines & Borders */
@@ -267,4 +269,69 @@ textarea::placeholder {
 .qr-surface [class*="bg-white"],
 .qr-surface.bg-white {
   background-color: #FFFFFF !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+a,
+label,
+input,
+textarea,
+select,
+span,
+li,
+td,
+th {
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-didone,
+.font-cinzel {
+  line-height: 1.18 !important;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  min-width: 0;
+}
+
+button span,
+a span,
+[class*="rounded"] span {
+  min-width: 0;
+}
+
+[class*="leading-none"],
+[class*="leading-tight"] {
+  line-height: 1.18 !important;
+}
+
+@media (max-width: 640px) {
+  .editorial-furniture,
+  .editorial-furniture-wine {
+    letter-spacing: 0.08em;
+  }
+
+  [class*="tracking-["] {
+    letter-spacing: 0.08em !important;
+  }
+
+  [class*="text-9xl"],
+  [class*="text-8xl"],
+  [class*="text-7xl"],
+  [class*="text-[11rem]"] {
+    font-size: clamp(2.75rem, 16vw, 5.25rem) !important;
+  }
 }
