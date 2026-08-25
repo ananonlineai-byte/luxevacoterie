@@ -240,6 +240,25 @@
   color: #F1DE9C !important;
 }
 
+/* Preserve faint decorative watermarks, but lift normal body text contrast. */
+[class*="text-[#1E1718]/"]:not([class*="text-[14vw]"]):not([class*="text-[20vw]"]):not([class*="text-[28vw]"]),
+[class*="text-[#63222D]/"]:not([class*="text-[14vw]"]):not([class*="text-[20vw]"]):not([class*="text-[28vw]"]),
+[class*="text-[#C5A059]/"]:not([class*="text-[14vw]"]):not([class*="text-[20vw]"]):not([class*="text-[28vw]"]),
+[class*="text-white/"]:not([class*="text-[14vw]"]):not([class*="text-[20vw]"]):not([class*="text-[28vw]"]) {
+  color: rgba(247, 238, 213, 0.82) !important;
+}
+
+[class*="text-[#C5A059]/[0.03]"],
+[class*="text-[#C5A059]/[0.04]"] {
+  color: rgba(214, 180, 90, 0.045) !important;
+}
+
+[class*="text-[#63222D]/70"],
+[class*="text-[#1E1718]/70"],
+[class*="text-[#1E1718]/80"] {
+  color: rgba(247, 238, 213, 0.86) !important;
+}
+
 [class*="border-[#63222D]"]:not([class*="border-[#63222D]/"]),
 [class*="border-[#46161F]"]:not([class*="border-[#46161F]/"]),
 [class*="border-[#C5A059]"]:not([class*="border-[#C5A059]/"]),
